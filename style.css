@@ -5,13 +5,12 @@ font-family:'Poppins',sans-serif;
 background:linear-gradient(135deg,#ff9acb,#ffd6eb);
 color:white;
 text-align:center;
+overflow-x:hidden;
 
 }
 
 .hidden{
-
 display:none;
-
 }
 
 .intro{
@@ -33,7 +32,7 @@ font-size:60px;
 
 .intro button{
 
-padding:15px 30px;
+padding:15px 35px;
 border:none;
 border-radius:30px;
 background:#ff2f92;
@@ -67,6 +66,16 @@ display:block;
 
 }
 
+/* brillo mágico */
+
+.glow{
+
+box-shadow:0 0 20px #fff,
+0 0 40px #ff7cc5,
+0 0 60px #ff2f92;
+
+}
+
 button{
 
 background:#ff4da6;
@@ -83,23 +92,12 @@ border-radius:10px;
 
 max-width:700px;
 margin:auto;
-font-size:20px;
-line-height:1.6;
+font-size:22px;
+line-height:1.7;
 
 }
 
-.songBtn{
-
-display:inline-block;
-margin-top:20px;
-padding:15px 25px;
-background:#ff2f92;
-border-radius:25px;
-text-decoration:none;
-color:white;
-font-weight:bold;
-
-}
+/* corazones */
 
 .hearts{
 
@@ -122,5 +120,31 @@ animation:float 6s linear infinite;
 
 0%{transform:translateY(100vh);}
 100%{transform:translateY(-10vh);}
+
+}
+
+/* pétalos */
+
+.petals{
+
+position:fixed;
+width:100%;
+height:100%;
+pointer-events:none;
+
+}
+
+.petal{
+
+position:absolute;
+font-size:20px;
+animation:fall 7s linear infinite;
+
+}
+
+@keyframes fall{
+
+0%{transform:translateY(-10vh);}
+100%{transform:translateY(110vh);}
 
 }
