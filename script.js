@@ -1,30 +1,38 @@
-function startExperience(){
+document.addEventListener("DOMContentLoaded",function(){
 
-document.querySelector(".intro").style.display="none"
-document.querySelector(".main").classList.remove("hidden")
+const startBtn = document.getElementById("startBtn")
+const intro = document.getElementById("intro")
+const main = document.getElementById("main")
+
+startBtn.onclick = function(){
+
+intro.style.display="none"
+main.classList.remove("hidden")
 
 }
 
 
-const images=document.querySelectorAll(".slides img")
+// carrusel
 
-let index=0
+const images = document.querySelectorAll(".slides img")
 
-document.querySelector(".next").onclick=()=>{
+let index = 0
+
+document.getElementById("next").onclick = function(){
 
 images[index].classList.remove("active")
 
-index=(index+1)%images.length
+index = (index + 1) % images.length
 
 images[index].classList.add("active")
 
 }
 
-document.querySelector(".prev").onclick=()=>{
+document.getElementById("prev").onclick = function(){
 
 images[index].classList.remove("active")
 
-index=(index-1+images.length)%images.length
+index = (index - 1 + images.length) % images.length
 
 images[index].classList.add("active")
 
@@ -33,7 +41,7 @@ images[index].classList.add("active")
 
 // corazones flotando
 
-const hearts=document.querySelector(".hearts")
+const hearts = document.querySelector(".hearts")
 
 setInterval(()=>{
 
@@ -45,7 +53,7 @@ heart.innerHTML="💖"
 
 heart.style.left=Math.random()*100+"%"
 
-heart.style.fontSize=Math.random()*25+10+"px"
+heart.style.fontSize=Math.random()*20+10+"px"
 
 hearts.appendChild(heart)
 
@@ -55,4 +63,6 @@ heart.remove()
 
 },6000)
 
-},250)
+},300)
+
+})
