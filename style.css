@@ -1,0 +1,207 @@
+body{
+
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#ff8fc4,#ffd6eb,#ffc0e0);
+background-size:400% 400%;
+animation:fondo 10s infinite alternate;
+color:white;
+text-align:center;
+
+}
+
+@keyframes fondo{
+
+0%{background-position:left;}
+100%{background-position:right;}
+
+}
+
+.intro{
+
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+}
+
+.intro h1{
+
+font-family:'Dancing Script';
+font-size:60px;
+
+}
+
+.intro button{
+
+padding:15px 30px;
+border:none;
+border-radius:30px;
+background:#ff2f92;
+color:white;
+font-size:20px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+.intro button:hover{
+
+transform:scale(1.1);
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+header{
+
+margin-top:30px;
+
+}
+
+header h1{
+
+font-family:'Dancing Script';
+font-size:50px;
+
+}
+
+.carousel{
+
+display:flex;
+justify-content:center;
+align-items:center;
+margin:40px auto;
+max-width:500px;
+
+}
+
+.slides img{
+
+width:100%;
+border-radius:20px;
+display:none;
+box-shadow:0 15px 35px rgba(0,0,0,0.4);
+transition:transform 0.6s;
+
+}
+
+.slides img.active{
+
+display:block;
+transform:scale(1.05);
+
+}
+
+button{
+
+background:#ff4da6;
+border:none;
+color:white;
+font-size:30px;
+padding:10px 20px;
+cursor:pointer;
+border-radius:10px;
+
+}
+
+.poem{
+
+max-width:700px;
+margin:auto;
+font-size:20px;
+line-height:1.7;
+
+animation:fade 3s;
+
+}
+
+@keyframes fade{
+
+from{opacity:0}
+to{opacity:1}
+
+}
+
+.music a{
+
+display:inline-block;
+margin-top:20px;
+padding:15px 25px;
+background:#ff2f92;
+border-radius:30px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:.3s;
+
+}
+
+.music a:hover{
+
+transform:scale(1.15);
+
+}
+
+footer{
+
+margin-top:60px;
+opacity:0.8;
+
+}
+
+/* corazones */
+
+.hearts{
+
+position:fixed;
+width:100%;
+height:100%;
+pointer-events:none;
+
+}
+
+.heart{
+
+position:absolute;
+font-size:20px;
+animation:float 6s linear infinite;
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(100vh);}
+100%{transform:translateY(-10vh);}
+
+}
+
+/* estrellas */
+
+.stars{
+
+position:fixed;
+width:100%;
+height:100%;
+background-image:radial-gradient(white 1px, transparent 1px);
+background-size:50px 50px;
+opacity:.3;
+
+}
+
+@media(max-width:600px){
+
+.poem{
+
+font-size:18px;
+padding:20px;
+
+}
+
+}
